@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Form</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#b7dfda;
+    }
+
+    h1{
+      text-align:center;
+      font-size:60px;
+      margin:20px 0;
+      color:black;
+    }
+
+    .survey-box{
+      width:90%;
+      background:#f2f2f2;
+      margin:30px auto;
+      padding:50px;
+      border-radius:8px;
+    }
+
+    .survey-box p{
+      text-align:center;
+      font-size:22px;
+      margin-bottom:40px;
+    }
+
+    form{
+      width:80%;
+      margin:auto;
+    }
+
+    .form-group{
+      display:flex;
+      margin-bottom:30px;
+      align-items:flex-start;
+    }
+
+    .form-group label{
+      width:45%;
+      text-align:right;
+      padding-right:30px;
+      font-size:22px;
+      color:#333;
+    }
+
+    .form-group input,
+    .form-group select,
+    textarea{
+      width:55%;
+      padding:12px;
+      border:1px solid #ccc;
+      border-radius:4px;
+      font-size:18px;
+    }
+
+    .radio-group,
+    .checkbox-group{
+      width:55%;
+      display:flex;
+      flex-direction:column;
+      gap:15px;
+      font-size:20px;
+    }
+
+    .radio-group label,
+    .checkbox-group label{
+      text-align:left;
+      width:100%;
+    }
+
+    input[type="radio"],
+    input[type="checkbox"]{
+      margin-right:10px;
+    }
+
+    textarea{
+      resize:none;
+      height:120px;
+    }
+
+    .submit-btn{
+      display:block;
+      margin:30px auto;
+      padding:15px 50px;
+      border:none;
+      background:#2c7;
+      color:white;
+      font-size:22px;
+      border-radius:5px;
+      cursor:pointer;
+    }
+
+    .submit-btn:hover{
+      background:#24a15e;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <h1>Survey Form</h1>
+
+  <div class="survey-box">
+
+    <p>Let us know how we can improve freeCodeCamp</p>
+
+    <form>
+
+      <!-- Name -->
+      <div class="form-group">
+        <label>* Name:</label>
+        <input type="text" placeholder="Enter your name">
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label>* Email:</label>
+        <input type="email" placeholder="Enter your Email">
+      </div>
+
+      <!-- Age -->
+      <div class="form-group">
+        <label>* Age:</label>
+        <input type="number" placeholder="Age">
+      </div>
+
+      <!-- Role -->
+      <div class="form-group">
+        <label>
+          Which option best describes your current role?
+        </label>
+
+        <select>
+          <option>Student</option>
+          <option>Teacher</option>
+          <option>Developer</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <!-- Recommendation -->
+      <div class="form-group">
+
+        <label>
+          * How likely is that you would recommend
+          freeCodeCamp to a friend?
+        </label>
+
+        <div class="radio-group">
+
+          <label>
+            <input type="radio" name="recommend">
+            Definitely
+          </label>
+
+          <label>
+            <input type="radio" name="recommend">
+            Maybe
+          </label>
+
+          <label>
+            <input type="radio" name="recommend">
+            Not sure
+          </label>
+
+        </div>
+
+      </div>
+
+      <!-- Favorite -->
+      <div class="form-group">
+
+        <label>What do you like most in FCC:</label>
+
+        <select>
+          <option>Select an option</option>
+          <option>Projects</option>
+          <option>Challenges</option>
+          <option>Community</option>
+        </select>
+
+      </div>
+
+      <!-- Improvements -->
+      <div class="form-group">
+
+        <label>
+          Things that should be improved in the future
+          (Check all that apply):
+        </label>
+
+        <div class="checkbox-group">
+
+          <label>
+            <input type="checkbox">
+            Front-end Projects
+          </label>
+
+          <label>
+            <input type="checkbox">
+            Back-end Projects
+          </label>
+
+          <label>
+            <input type="checkbox">
+            Data Visualization
+          </label>
+
+          <label>
+            <input type="checkbox">
+            Open Source Community
+          </label>
+
+        </div>
+
+      </div>
+
+      <!-- Comments -->
+      <div class="form-group">
+
+        <label>Any Comments or Suggestions?</label>
+
+        <textarea placeholder="Enter your comment here..."></textarea>
+
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="submit-btn">
+        Submit
+      </button>
+
+    </form>
+
+  </div>
+
+</body>
+</html>
